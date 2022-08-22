@@ -1,0 +1,30 @@
+body{
+    background-color: papayawhip;
+}
+h1{
+	text-align:center;
+	font-family:Times New Roman;
+	font-style:bold;
+	font-size: 300%;
+	position:auto;
+    text-decoration:underline;
+}
+nav{
+	border-radius: 5px;
+	width: 100%;
+	float:center;
+	font-family:Times New Roman;
+}
+
+#cv-form {
+	display: none;
+}
+
+.myimg{
+	border: 1px solid red;
+	border-radius: 50%;
+	width: 200px;
+}
+.background{
+    background-color: aqua;
+}
