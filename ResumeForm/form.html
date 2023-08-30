@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    
+    <style>
+        body {
+            background-color: whitesmoke;
+        }
+        h1 {
+            text-align: center;
+            font-family: Times New Roman;
+            font-style: bold;
+            font-size: 300%;
+            position: auto;
+            text-decoration: underline;
+        }
+
+        nav {
+            border-radius: 5px;
+            width: 100%;
+            float: center;
+            font-family: Times New Roman;
+        }
+
+        #cv-form {
+            display: none;
+        }
+
+        .myimg {
+            border: 1px solid red;
+            border-radius: 50%;
+            width: 200px;
+        }
+
+        .background {
+            background-color:blue;
+            color: white;
+        }
+        /* Add a black background color to the top navigation */
+        
+    </style>
+    <title>Resume Generator</title>
+</head>
+
+<body>
+    <header class="header_section" style="background-color: white;">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" href="index.html">
+              <span>
+                CV Express
+              </span>
+            </a>
+  
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""> </span>
+            </button>
+  
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav  ">
+                <li class="nav-item">
+                  <a class="nav-link" href="\HomePage\home.html">Home</a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="\ContactAndAboutUs\aboutUs.html"> About </a>
+                </li>
+                
+                <li class="nav-item active">
+                  <a class="nav-link" href="\ResumeForm\form.html"> Form <span class="sr-only"> </span> </a>
+                </li>
+              </ul>
+              <div class="user_option_box">
+                <a href="">
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+    <link href="\ResumeForm\defaultFormDetails.html"/>
+    <head>
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+        <style>
+            .row {
+                display: flex;
+                justify-content: space-around;
+            }
+
+            /* Create two equal columns that sits next to each other */
+            .column {
+                flex: content;
+                padding: 10px;
+                height: 300px;
+                /* Should be removed. Only for demonstration */
+            }
+
+            .generate_resume {
+                padding-top: 400px;
+                padding-left: 600px
+            }
+            /*header section*/
+            .hero_area {
+            position: relative;
+            min-height: 100vh;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            }
+
+            .sub_page .hero_area {
+            min-height: auto;
+            }
+
+            .sub_page .header_section {
+            margin-top: 0;
+            
+            -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+                    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+            }
+
+            .header_section .container-fluid {
+            padding-right: 25px;
+            padding-left: 25px;
+            }
+
+            .navbar-brand span {
+            font-weight: bold;
+            color: #000000;
+            font-size: 24px;
+            text-transform: uppercase;
+            }
+
+            .custom_nav-container {
+            padding: 15px 0;
+            }
+
+            .custom_nav-container .navbar-nav {
+            margin: auto;
+            }
+
+            .custom_nav-container .navbar-nav .nav-item .nav-link {
+            padding: 5px 25px;
+            color: #000000;
+            text-align: center;
+            text-transform: uppercase;
+            border-radius: 5px;
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
+            }
+
+            .custom_nav-container .navbar-nav .nav-item:hover .nav-link, .custom_nav-container .navbar-nav .nav-item.active .nav-link {
+            color: #ffffff;
+            background-color: #8019c8;
+            }
+
+            .custom_nav-container .nav_search-btn {
+            width: 35px;
+            height: 35px;
+            padding: 0;
+            border: none;
+            color: #000000;
+            }
+
+            .custom_nav-container .nav_search-btn:hover {
+            color: #000000;
+            }
+
+            .custom_nav-container .navbar-toggler {
+            outline: none;
+            }
+
+            .custom_nav-container .navbar-toggler {
+            padding: 0;
+            width: 37px;
+            height: 42px;
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
+            }
+
+            .custom_nav-container .navbar-toggler span {
+            display: block;
+            width: 35px;
+            height: 4px;
+            background-color: #000000;
+            margin: 7px 0;
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
+            position: relative;
+            border-radius: 5px;
+            transition: all 0.3s;
+            }
+
+            .custom_nav-container .navbar-toggler span::before, .custom_nav-container .navbar-toggler span::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #000000;
+            top: -10px;
+            border-radius: 5px;
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
+            }
+
+            .custom_nav-container .navbar-toggler span::after {
+            top: 10px;
+            }
+
+            .custom_nav-container .navbar-toggler[aria-expanded="true"] {
+            -webkit-transform: rotate(360deg);
+                    transform: rotate(360deg);
+            }
+
+            .custom_nav-container .navbar-toggler[aria-expanded="true"] span {
+            -webkit-transform: rotate(45deg);
+                    transform: rotate(45deg);
+            }
+
+            .custom_nav-container .navbar-toggler[aria-expanded="true"] span::before, .custom_nav-container .navbar-toggler[aria-expanded="true"] span::after {
+            -webkit-transform: rotate(90deg);
+                    transform: rotate(90deg);
+            top: 0;
+            }
+
+            .custom_nav-container .navbar-toggler[aria-expanded="true"] .s-1 {
+            -webkit-transform: rotate(45deg);
+                    transform: rotate(45deg);
+            margin: 0;
+            margin-bottom: -4px;
+            }
+
+            .custom_nav-container .navbar-toggler[aria-expanded="true"] .s-2 {
+            display: none;
+            }
+
+            .custom_nav-container .navbar-toggler[aria-expanded="true"] .s-3 {
+            -webkit-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
+            margin: 0;
+            margin-top: -4px;
+            }
+
+            .custom_nav-container .navbar-toggler[aria-expanded="false"] .s-1,
+            .custom_nav-container .navbar-toggler[aria-expanded="false"] .s-2,
+            .custom_nav-container .navbar-toggler[aria-expanded="false"] .s-3 {
+            -webkit-transform: none;
+                    transform: none;
+            }
+
+            .user_option_box {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            }
+
+            .user_option_box a {
+            margin-left: 15px;
+            color: #8019c8;
+            }
+
+            /*end header section*/
+        </style>
+    </head>
+    <!-- <div class="container" id="cv-form">
+    </div> -->
+    <b>
+        <h2 class="text-center my-2">RESUME FORM </h2>
+    </b>
+    <!-- <div class="row">
+        <div class="column"></div>
+        <div class="column"></div>
+      </div> -->
+    <form action = "http://localhost/projectresume/connect.php" method = "POST">
+        <div class="container">
+            <div class="row">
+                <div class="column">
+
+                    <p>
+                        <b>PERSONAL INFORMATION</b>
+                    </p>
+                    <div class="form-group">
+                        <label>Your Name
+                            <input type="text" placeholder="Enter here" class="form-control" name = "firstname" id="nameT2"/>
+                        </label>
+                    </div>
+                    <div class="form-group mt-2">
+                        <label>Your Mobile No.
+                            <input type="number" placeholder="Enter here" class="form-control" name = "mobile"/>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>Your email id
+                            <input type="email" placeholder="Enter here" class="form-control" name = "email"/>
+                        </label>
+                    </div>
+                    <div class="form-group mt-2">
+                        <label>Your Address:
+                            <input type="text" placeholder="Enter here" class="form-control" name = "address"/>
+                        </label>
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="aboutField">About </label>
+                        <textarea id="aboutField" rows="3" placeholder="Enter here" class="form-control" name = "about"></textarea>
+                        </label>
+                    </div>
+                    <label>Skills: <br>
+                        <input type="checkbox" name = "skill" value = "html"> HTML <br>
+                        <input type="checkbox" name = "skill" value = "js">javascript <br>
+                        <input type="checkbox" name = "skill" value = "ang">angular <br>
+                        <input type="checkbox" name = "skill" value = "java">java <br>
+                        <input type="checkbox" name = "skill" value = "c">C <br>
+                        <input type="checkbox" name = "skill" value = "py">Python <br>
+                        <input type="checkbox" name = "skill" value = "sql">SQL <br>
+                        <input type="checkbox" name = "skill" value = "cp">C++ <br>
+                        <input type="checkbox" name = "skill" value = "ds">Data structures and algorithms <br>
+                    </label><br>
+                    <!-- <div class="container text-center mt-2" id="weAddButton">
+                        <button onclick="addNewWEField()" class="btn btn-primary btn-sm">Add</button>
+                    </div> -->
+                </div>
+
+                <div class="column">
+                    <b>PROFESSIONAL INFORMATION</b>
+                    <div class="form-group mt-2">
+                        <label for="objField">Projects </label>
+                        <textarea id="objField" rows="5" placeholder="Enter here" class="form-control" name = "project"></textarea>
+                    </div>
+
+
+                    <div class="form-group mt-2" id="weField">
+                        <label for="">Work Experience</label>
+                        <textarea placeholder="Enter here" class="form-control weField" rows="3" name = "work"></textarea>
+
+                        <!--  -->
+
+                        <div class="container text-center mt-2" id="weAddButton">
+                            <button onclick="addNewWEField()" class="btn btn-primary btn-sm">Add</button>
+                        </div>
+                    </div>
+
+                    <div class="form-group mt-2" id="weField">
+                        <label for="">Certifications and Achievements</label>
+                        <textarea placeholder="Enter here" class="form-control weField" rows="3" name = "certificates"></textarea>
+
+                        <!--  -->
+
+                        <div class="container text-center mt-2" id="weAddButton">
+                            <button onclick="addNewWEField()" class="btn btn-primary btn-sm">Add</button>
+                        </div>
+                    </div>
+
+                    <div class="form-group mt-2" id="aqField">
+                        <label for="">Academic Qualification</label>
+                        <textarea placeholder="Enter here" class="form-control eqField" rows="3" name = "qualification"></textarea>
+
+                        <!--.......-->
+
+                        <div class="container text-center mt-2" id="aqAddButton">
+                            <button onclick="addNewAQField()" class="btn btn-primary btn-sm">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="generate_resume">
+                <!-- <a href="add.html"> -->
+                <button type="submit" id = "GenerateResume" name = "GenerateResume" onclick="printCV()" class="btn background">
+                    Generate Resume
+                </button>
+                <!-- </a> -->
+                
+            </div>
+        </div>
+    </form>
+</body>
+
+
+</html>
+
+
